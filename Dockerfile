@@ -5,4 +5,4 @@ WORKDIR /opt/app-root
 ONBUILD COPY requirements.txt /opt/app-root
 ONBUILD RUN pip install -r requirement.txt
 ONBUILD COPY src/ .
-CMD ["python", "app.py"]
+CMD ["python", "/opt/app-root/app.py"]
