@@ -8,4 +8,4 @@ ONBUILD COPY app.py app.py
 ONBUILD COPY requirements.txt /opt/app-root
 ONBUILD RUN pip install -r requirement.txt
 
-CMD ["python", "app.py"]
+CMD ["python", "src/app.py"]
