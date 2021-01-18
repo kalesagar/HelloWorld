@@ -1,4 +1,4 @@
-From python
+FROM python
 EXPOSE 5000
 RUN mkdir -p /opt/app-root
 COPY app.py app.py
