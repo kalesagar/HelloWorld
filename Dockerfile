@@ -1,7 +1,5 @@
 From python
 EXPOSE 5000
-RUN python -m venv /opt/venv
-ENV PATH="/opt/venv/bin:$PATH"
 RUN mkdir -p /opt/app-root
 COPY app.py app.py
 WORKDIR /opt/app-root
