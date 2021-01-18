@@ -6,5 +6,4 @@ WORKDIR /opt/app-root
 ONBUILD COPY app.py app.py
 ONBUILD COPY requirements.txt /opt/app-root
 ONBUILD RUN pip install -r requirement.txt
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+CMD ["python", "app.py"]
