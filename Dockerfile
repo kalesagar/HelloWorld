@@ -1,11 +1,9 @@
-FROM python
+FROM python:latest
+MAINTAINER Sagar <"kalesp95@gmail.com">
+COPY . /app
+WORKDIR /app
 EXPOSE 5000
-RUN mkdir -p /opt/app-root
-RUN chgrp -R 0 /opt/app-root && chmod -R g=u /opt/app-root
-COPY app.py app.py
-WORKDIR /opt/app-root
-ONBUILD COPY app.py app.py
-ONBUILD COPY requirements.txt requirements.txt
-ONBUILD RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
+ENTRYPOINT ["python"]
+CMD ["app.py"]
 
-CMD ["python", "src/app.py"]
